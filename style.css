@@ -1,0 +1,298 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #ffffff;
+}
+nav{
+    background-color: #111;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    border: #4747475e solid 2px;
+    z-index: 10;
+}
+.navTop{
+    display: flex;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item{
+    padding: 1px 25px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    display: flex;
+    height: 50px;
+    transition: background-color 0.25s;
+
+}
+.navItem{
+    padding: 1px 10px;
+    cursor: pointer;
+}
+#login{
+    position: absolute;
+    right: 55px;
+    top: 47px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 2.5em;
+    transition: all 0.25s;
+    color: white;
+    
+}
+.navItemi h1{
+    font-size: 2em;
+}
+#login:hover{
+    color: rgba(255, 255, 255, 0.418);
+}
+.navItemi{
+    padding: 1px 10px;
+}
+.item:hover{
+    background-color:  white;
+    color: #111;
+    border-radius: 3px;
+}
+.itemSlide:nth-child(1){
+    background-image: url(https://wallpapers.com/images/hd/red-gradient-background-stqwj36ihqid8933.jpg);
+    background-repeat: no-repeat;
+    color: white;
+    background-position: center;
+    background-size: cover;
+    border: #ff22225e solid 2px;
+}
+.itemSlide:nth-child(2){
+    background-image: url(https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    color: white;
+    background-position: center;
+    background-size: cover;
+    border: rgb(102, 102, 253) 2px solid;
+    
+}
+.itemSlide:nth-child(3){
+    background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/10483500-fundo-branco-com-linhas-gradiente-vetor.jpg);
+    background-repeat: no-repeat;
+    color: #111;
+    background-position: center;
+    background-size: cover;
+    border: whitesmoke 2px solid;
+    
+}
+.itemSlide:nth-child(4){
+    background-image: url(https://wallpapers.com/images/featured/fundo-de-gradiente-azul-07xqmk2r9n9vmxli.jpg);
+    background-repeat: no-repeat;
+    color: white;
+    background-position: center;
+    background-size: cover;
+    border: blue 2px solid;
+}
+.itemSlide:nth-child(5){
+    background-image: url(https://wallpapers.com/images/hd/red-gradient-background-phflaijtiiwpmg88.jpg);
+    background-repeat: no-repeat;
+    color: white;
+    background-position: center;
+    background-size: cover;
+    border: salmon 2px solid;
+}
+.slider{
+    overflow: hidden;
+}
+.sliderWrapper{
+    display: flex;
+    width: 500vw;
+    transition: all 0.25s ease-in-out;
+}
+.itemSlide{
+    width: 100vw;
+    justify-content: center;
+    position: relative;
+    display: flex;
+}
+.seta{
+    color: rgb(255, 255, 255);
+    font-size: 5em;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #ffffff0c;
+    width: 80px;
+    height: 80px;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    
+}
+#direita{
+    position: absolute;
+    right: 0;
+    top: 40%;
+    margin-right: 25px;
+    padding-left: 20px;
+    
+}
+#esquerda{
+    position: absolute;
+    left: 0;
+    top: 40%;
+    margin-left: 25px;
+    padding-left: 15px;
+    
+}
+.sliderImg:hover{
+    transform: scale(1.1);
+}
+.sliderImg{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    z-index: 1;
+    
+}
+.seta:hover{
+    background-color: #1111119f;
+}
+.precoSlide{
+    font-size: 3em;
+    position: absolute;
+    bottom: 25%;
+    left: 66%; 
+    font-weight: 300;
+    text-shadow:  black 2px 1px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.tituloSlide{
+    position: absolute;
+    left: 60%;
+    top: 0;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
+    z-index: 1;
+    text-shadow:  black 2px 1px;
+    
+}
+.precoSlide1{
+        font-size: 3em;
+        position: absolute;
+        bottom: 25%;
+        left: 68%; 
+        font-weight: 300;
+        text-shadow:  black 2px 1px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.precoSlide2{
+    position: absolute;
+    bottom: 25%;
+    left: 66%; 
+    font-size: 3em;
+    font-weight: 300;
+    text-shadow:  black 2px 1px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.catalogo{
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%; 
+    z-index: 20;
+}    
+.imgspro{
+    width: 100%;
+    height: auto;
+}
+
+.produtos{
+    text-align: center;
+}
+.desc{
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.tudo{
+    border-right: #111 2px solid;
+    border-bottom: #111 2px solid;
+    border-top: #111 2px solid;
+    width: 100%;
+}
+.tudo:hover{
+    background-color: #11111152;
+}
+.titulo{
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.precop{
+    font-size: 1.5em;
+}
+.submenu{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    display: none;
+    z-index: 30;
+    transition: all 0.25s;
+    box-shadow: 0 4px 8px rgb(34, 34, 34);
+
+}
+.overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 15;
+    transition: all 0.8s ease;
+    display: none;
+    pointer-events: none;
+}
+#sub:hover .submenu{
+    display: block;
+    background-color: #111;
+    border-radius: 10px;
+}
+.submenu .items:hover{
+    background-color: #cccccc13;
+    border-radius: 10px;
+}
+.items{
+    padding: 15px 15px;   
+    text-decoration: none;
+    font-size: 1.5em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color:white;
+    text-align: center;
+}
+#carrinho{
+    color: rgb(255, 255, 255);
+    font-size: 1.8em;
+    cursor: pointer;
+    transition: all 0.25s;
+    padding-left: 5px;
+}
+#carrinho:hover{
+    color: rgba(255, 255, 255, 0.418);
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.premier{
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%; 
+}    
+
