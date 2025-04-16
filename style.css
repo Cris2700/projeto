@@ -185,13 +185,13 @@ nav{
     
 }
 .precoSlide1{
-        font-size: 3em;
-        position: absolute;
-        bottom: 25%;
-        left: 68%; 
-        font-weight: 300;
-        text-shadow:  black 2px 1px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3em;
+    position: absolute;
+    bottom: 25%;
+    left: 68%; 
+    font-weight: 300;
+    text-shadow:  black 2px 1px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .precoSlide2{
     position: absolute;
