@@ -29,7 +29,7 @@
     }
 
     .container {
-      background-color: #2c2c2c;
+      background-color: #000000e3;
       padding: 30px;
       border-radius: 10px;
       width: 100%;
@@ -39,6 +39,7 @@
     h2 {
       text-align: center;
       color: #fff;
+      font-size: 1.8em;
     }
 
     form {
@@ -50,28 +51,28 @@
       margin-bottom: 15px;
       display: flex;
       flex-direction: column;
-      color: #ddd;
+      color: #eeeded;
     }
 
     input, select, button {
       padding: 10px;
       border: none;
-      border-radius: 5px;
+      border-radius: 10px;
       margin-top: 5px;
     }
 
     input, select {
-      background-color: #444;
-      color: #fff;
+      background-color: #eeeded;
+      color: #333;
     }
 
     input::placeholder {
-      color: #bbb;
+      color: #333;
     }
 
     button {
-      background-color: #000;
-      color: #fff;
+      background-color: #b9b9b95d;
+      color: #ffffff;
       cursor: pointer;
       margin-top: 20px;
       transition: background-color 0.3s;
@@ -91,7 +92,7 @@
 
   <div class="main">
     <div class="container">
-      <h2>Formulário de Cadastro</h2>
+      <h2>Cadastro do Cliente</h2>
       <form id="cadastroForm" onsubmit="return validarFormulario()">
         <label for="nome">Nome:
           <input type="text" id="nome" name="nome" required minlength="15" maxlength="80" pattern="[A-Za-zÀ-ÿ\s]+" title="Apenas letras e espaços">
