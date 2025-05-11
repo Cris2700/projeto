@@ -36,8 +36,6 @@
             </div>
             <span>
                <a href="login.html" class="log"><i class="fa-solid fa-user" id="login"></i></a>
-               <i class="fa-solid fa-magnifying-glass" id="lupa"></i>
-               <input type="text" id="barra" placeholder="Buscar camisas...">
                <a href="" class="car"><i class="fa-solid fa-cart-shopping" id="carrinho"></i></a>
             </span>
         </div>
@@ -227,22 +225,7 @@ sub.addEventListener('mouseleave', () => {
 sub.addEventListener('click', () => {
     overlay.style.display = 'none';
 });
-const lupa = document.getElementById('lupa');
-const barra = document.getElementById('barra')
 
-lupa.addEventListener('click', () =>{
-    barra.focus();
-});
-
-document.getElementById("barra").addEventListener('input', function(){
-    const termo = this.value.toLowerCase();
-    const produtos = document.querySelectorAll(".produtos");
-
-    produtos.forEach(produtos => {
-        const texto = produtos.innerText.toLowerCase();
-        produtos.style.display = texto.includes(termo) ? "block" : "none";
-    });
-});
 
 </script>
 
@@ -251,9 +234,9 @@ document.getElementById("barra").addEventListener('input', function(){
         <section class="informacoes">
             <h3 id="ajuste">Informações</h3>
             <ul>
-                <li><a href="sobre.html">Sobre nós</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
             </ul>
         </section>
         
