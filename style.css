@@ -213,20 +213,32 @@ nav{
     width: 100%;
     height: auto;
 }
-
-.produtos{
-    text-align: center;
+  
+.produtos {
+    margin: 15px;
+    border: 2px solid #ccc;
+    border-radius: 12px;    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff; 
 }
+
+.produtos:hover {
+    transform: translateY(-8px);  
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  
+    border-color: #111;
+ }
+
+.tudo {
+    text-align: center;
+    padding: 10px;
+}
+
 .desc{
     font-size: 1.5em;
     font-family: Arial, Helvetica, sans-serif;
 }
-.tudo{
-    border-right: #111 2px solid;
-    border-bottom: #111 2px solid;
-    border-top: #111 2px solid;
-    width: 100%;
-}
+ 
 .tudo:hover{
     background-color: #11111152;
 }
@@ -240,7 +252,7 @@ nav{
 .submenu{
     position: absolute;
     top: 10%;
-    left: 20%;
+    left: 22%;
     display: none;
     z-index: 30;
     transition: all 0.25s;
@@ -252,7 +264,7 @@ nav{
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 15;
-    transition: all 0.8s ease;
+    transition: all 1.0s ease;
     display: none;
     pointer-events: none;
 }
@@ -285,6 +297,28 @@ nav{
 #carrinho:hover{
     color: rgba(255, 255, 255, 0.418);
 }
+#lupa{
+    color: white;
+    position: absolute;
+    right: 58%;
+    font-size: 1.5em;
+    top: 6%;
+    cursor: pointer;
+}
+#barra{
+    position: absolute;
+    right: 10%;
+    padding: 8px;
+    width: 900px;
+    top: 53px;
+}
+#barra:focus{
+    background-color: whitesmoke;
+    outline: #606f7d;
+}
+#barra:focus::placeholder{
+    color: transparent;
+}
 a{
     text-decoration: none;
     color: #ffffff;
@@ -295,4 +329,52 @@ a{
     grid-template-columns: repeat(5, 1fr);
     width: 100%; 
 }    
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
 
+.footer-content {
+    display: flex; /* Usando flexbox para colocar lado a lado */
+    justify-content: space-evenly; /* Espaçamento entre as seções */
+    margin-bottom: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+footer h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#ajuste{
+    margin-left: 35px;
+}
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+footer ul li a:hover {
+    color: #199c36;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin-top: 20px;
+}

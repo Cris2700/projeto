@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Perigos Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      width: 300px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    .toggle-link {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    .toggle-link a {
+      color: #007BFF;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .toggle-link a:hover {
+      text-decoration: underline;
+    }
+    .erro {
+      color: #ff3333;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container" id="login-container">
+    <h2>Login</h2>
+    <form id="loginForm" onsubmit="return validarLogin(event)">
+        <input type="text" id="login" name="login" placeholder="Usuário" required>
+        <div id="loginErro" class="erro"></div>
+        
+        <input type="password" id="senha" name="senha" placeholder="Senha" required>
+        <div id="senhaErro" class="erro"></div>
+        
+        <button type="submit">Entrar</button>
+    </form>
+    <div class="toggle-link">
+        Não tem uma conta? <a href="cadastro.html">Cadastre-se</a>
+    </div>
+</div>
+
+<script>
+  function validarLogin(event) {
+    event.preventDefault(); 
+
+    let valid = true;
+
+    
+    document.getElementById("loginErro").innerHTML = '';
+    document.getElementById("senhaErro").innerHTML = '';
+
+    
+    const usuarioCadastro = JSON.parse(localStorage.getItem("cadastroUsuario"));
+    const loginInput = document.getElementById("login").value;
+    const senhaInput = document.getElementById("senha").value;
+
+    
+    if (!usuarioCadastro) {
+      valid = false;
+      document.getElementById("loginErro").innerHTML = "Nenhum usuário encontrado.";
+      return valid;
+    }
+
+    
+    if (usuarioCadastro.login !== loginInput) {
+      valid = false;
+      document.getElementById("loginErro").innerHTML = "Usuário não encontrado.";
+    }
+
+    
+    if (usuarioCadastro.senha !== senhaInput) {
+      valid = false;
+      document.getElementById("senhaErro").innerHTML = "Senha incorreta.";
+    }
+
+    
+    if (valid) {
+      alert("Login bem-sucedido!");
+      window.location.href = "index.html"; 
+    }
+
+    return valid;
+  }
+</script>
+
+</body>
+</html>
+
+
+
