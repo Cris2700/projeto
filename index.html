@@ -23,7 +23,7 @@
                 <div class="menu">
                     <a href=""><div class="item">Início</div></a>
                     <a href=""><div class="item">Sobre nós</div></a>
-                    <<div class="item" id="sub">Catálogo
+                    <a href=""><div class="item" id="sub">Catálogo
                         <div class="submenu">
                             <div class="opcoes">
                                 <a href="brasil.html" class="items">Brasileirão Série A</a>
@@ -31,7 +31,8 @@
                                 <a href="selecao.html" class="items">Seleções</a>
                             </div>
                         </div>
-                    </div>
+                    </div></a> 
+                 
                 </div>
             </div>
             <span>
@@ -46,32 +47,87 @@
             <div class="itemSlide">
                 <img src="img/flamengo1-removebg-preview.png" alt="" class="sliderImg">
                 <div class="slidebg"></div>
-                <h1 class="tituloSlide">Novo <br>  Manto Sagrado <br>2025</h1>
-                <h2 class="precoSlide">R$ 150,00</h2>
+                <h1 class="descSlide">
+                    <span class="frase">Vestiu rubro-negro</span>
+                    <span class="frase">não tem</span>
+                    <span class="frase">pra ninguém!</span>
+                </h1>
+                <h1 class="tituloSlide">
+                    <span class="frase">Novo</span>
+                    <span class="frase">Manto Sagrado</span>
+                    <span class="frase">Por apenas</span>
+                </h1>
+                <h2 class="precoSlide">
+                    <span class="frase">R$ 150,00</span>
+                </h2>
             </div>
             <div class="itemSlide">
                 <img src="img/gremio1-removebg-preview.png" alt="" class="sliderImg">
                 <div class="slidebg"></div>
-                <h1 class="tituloSlide">Nova <br> Camisa do Imortal <br>2025</h1>
-                <h2 class="precoSlide1">R$ 150,00</h2>
+                <h1 class="descSlide">
+                    <span class="frase">O Rei</span>
+                    <span class="frase">de Copas</span>
+                    <span class="frase">está aqui!</span>
+                </h1>
+                <h1 class="tituloSlide">
+                    <span class="frase">Nova</span>
+                    <span class="frase">Camisa do Imortal</span>
+                    <span class="frase">Por apenas</span>
+                </h1>
+                <h2 class="precoSlide1">
+                    <span class="frase">R$150,00</span>
+                </h2>
             </div>
             <div class="itemSlide">
                 <a href=""><img src="img/santos1-removebg-preview.png" alt="" class="sliderImg"> </a>
                 <div class="slidebg"></div>
-                <h1 class="tituloSlide">Nova <br> Manta do Peixe<br>2025</h1>
-                <h2 class="precoSlide">R$ 150,00</h2>
+                <h1 class="descSlide">
+                    <span class="frase">Ô Neymar</span>
+                    <span class="frase">Ô Neymar</span>
+                    <span class="frase">Ô Neymar!</span>
+                </h1>
+                <h1 class="tituloSlide">
+                    <span class="frase">Nova</span>
+                    <span class="frase">Manta do Peixe</span>
+                    <span class="frase">Por apenas</span>
+                </h1>
+                <h2 class="precoSlide2">
+                    <span class="frase">R$150,00</span>
+                </h2>
             </div>
             <div class="itemSlide">
                 <img src="img/cruzeiro1-removebg-preview.png" alt="" class="sliderImg">
                 <div class="slidebg"></div>
-                <h1 class="tituloSlide">Nova <br> Camisa da Raposa <br>2025</h1>
-                <h2 class="precoSlide1">R$ 150,00</h2>
+                <h1 class="descSlide">
+                    <span class="frase">O maior campeão</span>
+                    <span class="frase">da Copa do Brasil</span>
+                    <span class="frase">chegou!</span>
+                </h1>
+                <h1 class="tituloSlide">
+                    <span class="frase">Nova</span>
+                    <span class="frase">Camisa da Raposa</span>
+                    <span class="frase">Por apenas</span>
+                </h1>
+                <h2 class="precoSlide1">
+                    <span class="frase">R$150,00</span>
+                </h2>
             </div>
             <div class="itemSlide">
                 <a href=""><img src="img/inter1-removebg-preview.png" alt="" class="sliderImg"></a>
                 <div class="slidebg"></div>
-                <h1 class="tituloSlide">Nova <br> Camisa do Inter <br>2025</h1>
-                <h2 class="precoSlide2">R$ 150,00</h2>
+                <h1 class="descSlide">
+                    <span class="frase">O lado</span>
+                    <span class="frase">Vermelho do sul</span>
+                    <span class="frase">támbem está aqui!</span>
+                </h1>
+                <h1 class="tituloSlide">
+                    <span class="frase">Nova</span>
+                    <span class="frase">Camisa do Inter</span>
+                    <span class="frase">Por apenas</span>
+                </h1>
+                <h2 class="precoSlide2">
+                    <span class="frase">R$150,00</span>
+                </h2>
             </div>
         </div>
     </div>
@@ -198,63 +254,81 @@
     </div>
 </div>
 <script>
-    const wrapper = document.querySelector(".sliderWrapper");
-var esquerda = document.getElementById ("esquerda");
-var direita = document.getElementById ("direita");
+const wrapper = document.querySelector(".sliderWrapper");
+var esquerda = document.getElementById("esquerda");
+var direita = document.getElementById("direita");
 var posiAtual = 0;
 var conta = 0;
 var imgs = 5;
 var tamanhoSlide = 100;
-var intervalo = 3500;
+var intervalo = 7000;
 
-function moverDireita(){
-    if (conta < imgs - 1){
-        posiAtual -= tamanhoSlide;
-        conta++;
-    } else {
-        posiAtual = 0;
-        conta = 0;
-    }
-    wrapper.style.transform = `translateX(${posiAtual}vw)`;
-};
+function animarSlideAtual() {
+  const slides = document.querySelectorAll('.itemSlide');
+  const slideAtual = slides[conta];
+  const animados = slideAtual.querySelectorAll('.descSlide, .tituloSlide, .precoSlide, .precoSlide1, .precoSlide2, .frase');
 
-function moverEsquerda(){
-    if (conta > 0) {
-        posiAtual += tamanhoSlide;
-        conta--;
-    } else {
-        posiAtual = -(imgs - 1) * tamanhoSlide;
-        conta = imgs - 1;
-    }
-    wrapper.style.transform = `translateX(${posiAtual}vw)`;
-};
+  animados.forEach(el => {
+    el.style.animation = 'none';
+    el.offsetHeight; 
+    el.style.animation = '';
+  });
+}
 
-var slideAuto = setInterval (moverDireita, intervalo);
+function moverDireita() {
+  if (conta < imgs - 1) {
+    posiAtual -= tamanhoSlide;
+    conta++;
+  } else {
+    posiAtual = 0;
+    conta = 0;
+  }
+  wrapper.style.transform = `translateX(${posiAtual}vw)`;
+  animarSlideAtual();
+}
 
-function resetar(){
-    clearInterval (slideAuto);
-    slideAuto = setInterval (moverDireita, intervalo);
-};
-direita.addEventListener("click" , () => {
-    moverDireita();
-    resetar();
+function moverEsquerda() {
+  if (conta > 0) {
+    posiAtual += tamanhoSlide;
+    conta--;
+  } else {
+    posiAtual = -(imgs - 1) * tamanhoSlide;
+    conta = imgs - 1;
+  }
+  wrapper.style.transform = `translateX(${posiAtual}vw)`;
+  animarSlideAtual();
+}
+
+var slideAuto = setInterval(moverDireita, intervalo);
+
+function resetar() {
+  clearInterval(slideAuto);
+  slideAuto = setInterval(moverDireita, intervalo);
+}
+
+direita.addEventListener("click", () => {
+  moverDireita();
+  resetar();
 });
-esquerda.addEventListener("click" , () => {
-    moverEsquerda();
-    resetar();
+
+esquerda.addEventListener("click", () => {
+  moverEsquerda();
+  resetar();
 });
+
 const sub = document.getElementById('sub');
 const overlay = document.getElementById('overlay');
 
 sub.addEventListener('mouseenter', () => {
-    overlay.style.display = 'block';
+  overlay.style.display = 'block';
 });
 sub.addEventListener('mouseleave', () => {
-    overlay.style.display = 'none';
+  overlay.style.display = 'none';
 });
 sub.addEventListener('click', () => {
-    overlay.style.display = 'none';
+  overlay.style.display = 'none';
 });
+
 
 
 </script>
@@ -272,9 +346,9 @@ sub.addEventListener('click', () => {
         <section class="redes-sociais">
             <h3 id="ajuste">Siga-nos</h3>
             <ul>
-                <li><a href="https://pt-br.facebook.com/login/device-based/regular/login/" target="_blank">Facebook</a></li>
-                <li><a href="https://www.instagram.com/help/ipreporting/report/copyright/" target="_blank">Instagram</a></li>
-                <li><a href="https://twitter.com/login?lang=en-gb" target="_blank">Twitter</a></li>
+                <li><a href="#" target="_blank">Facebook</a></li>
+                <li><a href="#" target="_blank">Instagram</a></li>
+                <li><a href="#" target="_blank">Twitter</a></li>
             </ul>
         </section>
 
