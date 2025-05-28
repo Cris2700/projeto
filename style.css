@@ -418,7 +418,7 @@ footer ul li a:hover {
   }
 }
 
-/* Animação saindo para a esquerda */
+
 @keyframes slideOutLeft {
   0% {
     transform: translateX(0);
@@ -432,12 +432,12 @@ footer ul li a:hover {
 
 
 .descSlide, .tituloSlide, .precoSlide, .precoSlide1, .precoSlide2{
-    animation: slideInRight 0.5s ease forwards;
+    animation: slideInRight 0.8s ease forwards;
 }
 .sliderImg{
     opacity: 0;
-    animation: slideInRight 1.3s ease forwards;
-    animation-delay: 2.5s;
+    animation: slideInRight 1.5s ease forwards;
+    animation-delay: 3.0s;
 
 }
 .sliderWrapper {
@@ -460,56 +460,42 @@ footer ul li a:hover {
 
 
 .frase:nth-child(1) {
-    animation-delay: 0.3s;
-}
-
-.frase:nth-child(2) {
-    animation-delay: 1.0s;
-}
-
-.frase:nth-child(3) {
-    animation-delay: 1.7s;
-}
-.frase:nth-child(4) {
     animation-delay: 0.5s;
 }
 
-.frase:nth-child(5) {
-    animation-delay: 1.2s;
+.frase:nth-child(2) {
+    animation-delay: 1.3s;
 }
 
-.frase:nth-child(6) {
-    animation-delay: 1.9s;
+.frase:nth-child(3) {
+    animation-delay: 2.1s;
 }
+
 .tituloSlide span:nth-child(1) {
-    animation-delay: 3.3s;
-}
-.tituloSlide span:nth-child(2) {
     animation-delay: 4.0s;
 }
+.tituloSlide span:nth-child(2) {
+    animation-delay: 4.8s;
+}
 .tituloSlide span:nth-child(3) {
-    animation-delay: 4.9s;
+    animation-delay: 5.6s;
 }
-.tituloSlide span:nth-child(4) {
-    animation-delay: 3.5s;
-}
-.tituloSlide span:nth-child(5) {
-    animation-delay: 4.2s;
-}
-.tituloSlide span:nth-child(6) {
-    animation-delay: 5.1s;
-}
+
 .tituloSlide{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.precoSlide span:nth-last-child(1){
-    animation-delay: 5.5s;
+.precoSlide span:nth-child(1){
+    animation-delay: 6.5s;
+    animation-duration: 1.0s;
 }
+    
 .precoSlide1 span:nth-last-child(1){
-    animation-delay: 5.5s;
+    animation-delay: 6.5s;
+    animation-duration: 1.0s;
 }
 .precoSlide2 span:nth-last-child(1){
-    animation-delay: 5.5s;
+    animation-delay: 6.5s;
+    animation-duration: 1.0s;
 }

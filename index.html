@@ -261,12 +261,12 @@ var posiAtual = 0;
 var conta = 0;
 var imgs = 5;
 var tamanhoSlide = 100;
-var intervalo = 7000;
+var intervalo = 8000;
 
 function animarSlideAtual() {
   const slides = document.querySelectorAll('.itemSlide');
   const slideAtual = slides[conta];
-  const animados = slideAtual.querySelectorAll('.descSlide, .tituloSlide, .precoSlide, .precoSlide1, .precoSlide2, .frase');
+  const animados = slideAtual.querySelectorAll('.descSlide, .tituloSlide, .precoSlide, .precoSlide1, .precoSlide2, .frase, .sliderImg');
 
   animados.forEach(el => {
     el.style.animation = 'none';
