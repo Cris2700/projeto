@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="paginaproduto.css">
+    <script src="https://kit.fontawesome.com/9afa31b3d3.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="navTop">
+            <a href="index.html">
+                <img src="img/LOGO PERIGO.jpeg" alt="Perigo's Store Logo" class="logo">
+            </a>
+            <h1>Perigo'S Store</h1>
+            <div class="menu">
+                <a href="index.html" class="item">Início</a>
+                <a href="#" class="item">Sobre nós</a>
+                <div class="item" id="sub">Catálogo
+                    <div class="submenu">
+                        <a href="brasil.html" class="items">Brasileirão Série A</a>
+                        <a href="europa.html" class="items">Times Europeus</a>
+                        <a href="selecao.html" class="items">Seleções</a>
+                    </div>
+                </div>
+            </div>
+            <div class="icon-links">
+                <button id="dark-mode-toggle" class="dark-mode-button">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="login.html"><i class="fa-solid fa-user"></i></a>
+                <i class="fa-solid fa-cart-shopping" id="carrinho-icon"></i>
+            </div>
+        </div>
+    </nav>
+    <div class="overlay" id="overlay"></div>
+<div class="container">
+    <div class="galeria">
+      <img id="imagem-principal" src="img/sao1-removebg-preview.png" alt="Camisa Flamengo" />
+
+      <div class="miniaturas">
+        <img src="img/sao1-removebg-preview.png" onclick="trocarImagem(this)" alt="Ângulo 1">
+        <img src="img/sao1_atras-removebg-preview.png" onclick="trocarImagem(this)" alt="Ângulo 2">
+      </div>
+    </div>
+
+    <div class="info">
+      <h1>Camisa 1 São Paulo 25/26 1:1 </h1>
+      <label for="tamanho">Selecione o tamanho:</label>
+      <select id="tamanho" class="tamanhos">
+        <option>P</option>
+        <option>M</option>
+        <option>G</option>
+        <option>GG</option>
+      </select>
+
+      <div class="botoes">
+        <button class="com">Comprar</button>
+        <button class="carri">Adicionar ao Carrinho</button>
+      </div>
+      
+    </div>
+  </div>
+
+  
+
+  <script>
+    function trocarImagem(el) {
+  const miniaturas = document.querySelectorAll('.miniaturas img');
+  miniaturas.forEach(img => {
+    img.classList.remove('ativo');
+  });
+
+ 
+  el.classList.add('ativo');
+
+ 
+  document.getElementById("imagem-principal").src = el.src;
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const primeiraMiniatura = document.querySelector('.miniaturas img:first-child');
+    if (primeiraMiniatura) {
+        primeiraMiniatura.classList.add('ativo');
+    }
+});
+const sub = document.getElementById('sub');
+const overlay = document.getElementById('overlay');
+
+sub.addEventListener('mouseenter', () => {
+  overlay.style.display = 'block';
+});
+sub.addEventListener('mouseleave', () => {
+  overlay.style.display = 'none';
+});
+sub.addEventListener('click', () => {
+  overlay.style.display = 'none';
+});
+  </script>
+<footer>
+    <div class="footer-content">
+        <section class="informacoes">
+            <h3 id="ajuste">Informações</h3>
+            <ul>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+            </ul>
+        </section>
+        
+        <section class="redes-sociais">
+            <h3 id="ajuste">Siga-nos</h3>
+            <ul>
+                <li><a href="#" target="_blank">Facebook</a></li>
+                <li><a href="#" target="_blank">Instagram</a></li>
+                <li><a href="#" target="_blank">Twitter</a></li>
+            </ul>
+        </section>
+
+        <section class="contato">
+            <h3>Contato</h3>
+            <p>Email: perigosstoreADS@gmail.com</p>
+            <p>Telefone: (21) 98000-4754</p>
+        </section>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 E-commerce - Tudo para você economizar mais.</p>
+    </div>
+</footer>
+   
+</body>
+</html>
